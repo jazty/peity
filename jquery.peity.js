@@ -1,4 +1,4 @@
-// Peity jQuery plugin version 3.3.0
+// Peity jQuery plugin version 3.3.1
 // (c) 2018 Ben Pickles
 //
 // http://benpickles.github.io/peity
@@ -118,6 +118,12 @@
       if (opts.delimiter == "/") {
         var v1 = values[0]
         var v2 = values[1]
+        values = [v1, Math.max(0, v2 - v1)]
+      }
+
+      if (opts.values) {
+        var v1 = opts.values[0]
+        var v2 = opts.values[1]
         values = [v1, Math.max(0, v2 - v1)]
       }
 
